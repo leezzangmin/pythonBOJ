@@ -1,6 +1,5 @@
 import sys
 input=sys.stdin.readline
-
 N,M=map(int,input().split())
 grid=list(list(map(int,input().split())) for _ in range(N))
 visit=[[0]*M for _ in range(N)]
@@ -8,6 +7,7 @@ dx = [-1, 0, 1, 0]
 dy = [0, 1, 0, -1]
 ans=-sys.maxsize
 mv=max(max(*grid))
+
 def dfs(x,y,count,res):
     global ans
 
@@ -28,6 +28,7 @@ def dfs(x,y,count,res):
             visit[mx][my]=1
             dfs(mx,my,count+1,res+grid[mx][my])
             visit[mx][my]=0
+
 
 for a in range(N):
     for b in range(M):
