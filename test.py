@@ -1,3 +1,4 @@
-N,M=4,5
-visit=[[0]*M for _ in range(N)]
-print(visit)
+a1=[['b','c'],['b','d']]
+a2=['b']
+a1.remove(['b'])
+print(a1)

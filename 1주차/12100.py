@@ -88,9 +88,8 @@ def move_left(board):
 def solution(tmp_board, cnt):
     global ans
     if cnt == 5:  # 최대 5번만 이동 가능
-        for i in range(N):
-            for j in range(N):
-                ans = max(ans, tmp_board[i][j]) # 현재 블록 중 최대 블록
+        ans=max(ans,max(map(max,tmp_board)))
+
         return
 
     solution(move_left(deepcopy(tmp_board)), cnt + 1) # 블록을 좌측으로 이동
