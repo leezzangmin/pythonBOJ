@@ -1,5 +1,11 @@
-d=[['0','a'],['1','b']]
-for i in range(2):
-    d[i][0]=int(d[i][0])
-print(d[:][:])
-print(0 in d[:])
+from queue import PriorityQueue
+q=PriorityQueue()
+test=[]
+q.put(test,5)
+print(q.get(test))
+print(test)
+
+import heapq
+
+heapq.heappush(test,5)
+print(test)
