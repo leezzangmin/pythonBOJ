@@ -9,9 +9,7 @@ cards=list(map(int,input().split()))
 heapq.heapify(cards)
 
 for i in range(m):
-    a=heapq.heappop(cards)
-    b=heapq.heappop(cards)
+    a,b=heapq.heappop(cards),heapq.heappop(cards)
     c=a+b
-    heapq.heappush(cards,c)
-    heapq.heappush(cards,c)
+    heapq.heappush(cards,c);heapq.heappush(cards,c)
 print(sum(cards))
