@@ -8,9 +8,7 @@ ans=0
 for i in range(N):
     for j in range(i+1,i+K+1):
         if j<N:
-        #    print(i,j)
             if student[i]==student[j]:
-                print(i,j)
                 ans+=1
         else:
             break
