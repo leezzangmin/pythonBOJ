@@ -13,9 +13,6 @@ def dfs(x,y):
             if visit[mx][my]==False and grid[mx][my]=='1':
                 dfs(mx,my)
 
-
-
-
 if __name__=="__main__":
     dx=[1,0,-1,0]
     dy=[0,1,0,-1]
