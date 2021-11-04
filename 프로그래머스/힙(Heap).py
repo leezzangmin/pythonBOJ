@@ -8,10 +8,8 @@ def solution(scoville, K):
     a=heapq.heappop(scoville)
     heapq.heappush(scoville,a)
     while a<K:
-        try:
-            a=heapq.heappop(scoville)
-        except:
-            return -1
+        a=heapq.heappop(scoville)
+
         if a>=K:
             break
         try:
