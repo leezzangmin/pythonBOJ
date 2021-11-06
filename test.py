@@ -1,2 +1,2 @@
-a=[[0,1,2],[1,2,3]]
-print(0 in a)
+visit=
+print(visit)
