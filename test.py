@@ -1,2 +1,6 @@
-a=[1,2,3,4]
-print(a.index(4))
+import copy
+temp=1
+a=[copy.copy(temp)]*4
+#c=id(temp)
+temp=2
+print(a)
