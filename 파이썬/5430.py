@@ -34,5 +34,3 @@ for _ in range(T):
             print(str(list(x)).replace(' ',''))
         else:
             print(str(list(x)[::-1]).replace(' ',''))
-[2, 1]
-[2,1]
