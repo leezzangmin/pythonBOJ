@@ -3,13 +3,6 @@ N,K=map(int,input().split())
 end=100000
 s=[0]*(end+1)
 
-# if N>K:
-#     s=[0]*(N+1)
-#     end=N
-# else:
-#     s=[0]*(K+1)
-#     end=K
-
 Q=deque()
 Q.append((N,0))
 while Q:
