@@ -20,7 +20,6 @@ def dfs(x,y):
                 grid[x][y]=0
                 return
 def check():
-    global cheese
     cheese=0
     for i in range(X):
         for j in range(Y):
