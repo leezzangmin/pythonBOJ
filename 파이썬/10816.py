@@ -14,3 +14,4 @@ for i in range(M):
 
 
 
+# sys.stdout.write()
