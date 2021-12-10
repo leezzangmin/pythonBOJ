@@ -1,21 +1,22 @@
-import sys;input=sys.stdin.readline
-N,d,k,c=map(int,input().split())
-sushi=list(int(input()) for _ in range(N))
+import sys
 
-print(sushi)
-L,R=0,1
-link=[sushi[L]]
+n, d, k, c = map(int, sys.stdin.readline().rsplit())
+arr = [int(sys.stdin.readline().rstrip()) for _ in range(n)]
+lp, rp = 0, 0
+answer = 0
 
-while L!=N-k+1:
-    if len(link)==k:
-        print(link)
-        L+=1
-        R=L+1
-        link=[sushi[L]]
-    if sushi[R] in link:
-        L+=1
-        R=L+1
-        link=[sushi[L]]
-    else:
-        link.append(sushi[R])
-        R+=1
+while lp != n:
+    rp = lp + k
+    case = set()
+    addable = True
+    for i in range(lp, rp):
+        i %= n
+        case.add(arr[i])
+        if arr[i] == c: addable = False
+
+    cnt = len(case)
+    if addable: cnt += 1
+    answer = max(answer, cnt)
+    lp += 1
+
+print(answer)
