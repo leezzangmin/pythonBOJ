@@ -51,4 +51,3 @@ else:
                 for k in range(M):
                     ans=max(ans,tomato[i][j][k])
         print(ans-1)
-    
