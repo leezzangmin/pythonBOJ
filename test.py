@@ -1,1 +1,2 @@
-print(4//2)
+s=[str(x) for x in range(0,10)]
+print(s)
