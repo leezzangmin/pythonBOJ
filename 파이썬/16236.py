@@ -72,7 +72,6 @@ def bfs():
 fishList=bfs()
 #sys.exit()
 while fishList:
-    print(fishList,babySize,time,babyLocation)
     a = findNearestAndEatable()
     if a!=-1:
         space[babyLocation[0]][babyLocation[1]]=0
