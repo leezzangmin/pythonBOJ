@@ -1,5 +1,4 @@
 import sys;input=sys.stdin.readline
-from collections import deque
 N,K=map(int,input().split())
 A=list(map(int,input().split()))
 robot=[0]*(N*2)
@@ -22,7 +21,6 @@ while naegoo<K:
     for i in range(left+N-1,left-1,-1):
         j=(i+1) % (2*N)
         i=i%(2*N)
-        #print(i,j,'ijij')
 
         if robot[i]==1:
             if robot[j]==1:
