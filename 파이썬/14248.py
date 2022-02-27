@@ -9,7 +9,6 @@ s=int(input()) - 1
 
 
 def bfs():
-    count=0
     Q=deque()
     Q.append(s)
     while Q:
@@ -17,9 +16,8 @@ def bfs():
         visit[location]=True
         for i in (location+d[location],location-d[location]):
             if 0<=i<N and visit[i]==False:
+                visit[i]=True
                 Q.append(i)
-                count+=1
-    return count
 
 def dfs(s):
     visit[s]=True
@@ -28,6 +26,6 @@ def dfs(s):
             dfs(i)
 
 
-dfs(s)
+bfs()
 ans=visit.count(True)
 print(ans)
