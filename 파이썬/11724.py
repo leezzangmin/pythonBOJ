@@ -1,5 +1,5 @@
 import sys;input=sys.stdin.readline
-
+sys.setrecursionlimit(10**8)
 N,M=map(int,input().split())
 
 graph=[ [] for _ in range(N+1) ]
