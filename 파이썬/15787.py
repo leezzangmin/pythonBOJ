@@ -26,7 +26,6 @@ for _ in range(M):
         i=command[1]-1
         train[i] = train[i]>>1
 
-print(len(set(train)))
 ans=0
 for i in range(N):
     flag=True
