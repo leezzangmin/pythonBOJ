@@ -46,8 +46,6 @@ def solution(places):
 
 
 
-
-
 if __name__ == "__main__":
     place1=[	['POOOP', 'OXXOX', 'OPXPX', 'OOXOX', 'POXXP'],
     ['POOPX', 'OXPXP', 'PXXXO', 'OXXXO', 'OOOPP'],
