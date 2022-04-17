@@ -57,7 +57,6 @@ while time!=N:
 
     time+=1
 
-print()
 for i in range(R):
     for j in range(C):
         if grid[i][j]==".":
