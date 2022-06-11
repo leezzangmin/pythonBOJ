@@ -1,40 +1,21 @@
 import sys;input=sys.stdin.readline
-STRING=[0]*600000
-s=input().rstrip()
-for i in range(len(s)):
-    STRING[i]=[s[i],i-1,i+1]
-STRING[0][1]=False
-STRING[len(s)-1][2]=False
 
-# ['a', False, 1], ['b', 0, 2], ['c', 1, 3], ['d', 2, False],
-M=int(input())
-pointer=len(s)
-for _ in range(M):
-    o=input().split()
-
-    if o[0]=='L':
-        if STRING[pointer-1][1]:
-            pointer=STRING[pointer-1][1]
-    elif o[0]=='D':
-        if STRING[pointer-1][2]:
-            pointer=STRING[pointer-1][1]
-    elif o[0]=='B':
-
+stk1 = list(input().strip())
+stk2 = []
+n = int(input())
+for _ in range(n):
+    line=input().split()
+    if line[0] == 'L':
+        if stk1:
+            stk2.append(stk1.pop())
+    elif line[0] == 'D':
+        if stk2:
+            stk1.append(stk2.pop())
+    elif line[0] == 'B':
+        if stk1:
+            stk1.pop()
     else:
+        stk1.append(line[1])
+print(''.join(stk1 + list(reversed(stk2))))
 
-
-
-# for i in s:
-#     print(i,end='')
-
-
-# dmih
-# dmi
-# dm
-# dmx
-# dm'x
-# d'x
-# 'x
-# 'yx
-# yx'
-# yx'z
+#이중 연결리스트는 stack 2개로 구현 가능하다 메모...
