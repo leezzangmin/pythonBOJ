@@ -1,1 +1,3 @@
-print(0==False)
+a=['a','b']
+a.reverse()
+print(a)
