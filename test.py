@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import sys
 input = sys.stdin.readline
 
@@ -38,3 +39,10 @@ while start<=end:
     else:
         start = mid + 1
 print(result)
+=======
+win={6:1,5:2,4:3,3:4,2:5,1:61,0:6}
+a=[0,1,2,3,0]
+a=set(a)
+a.remove(0)
+print(a)
+>>>>>>> Stashed changes

@@ -1,5 +1,5 @@
 import sys;input=sys.stdin.readline
-from collections import deque
+sys.setrecursionlimit(10**8)
 
 def dfs(x,y):
     global ans
