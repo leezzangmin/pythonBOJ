@@ -25,10 +25,9 @@ for di,si in move_command:
     for i in range(len(cloud_list)):
         cloud_list[i][0]=(cloud_list[i][0]+move_direction_X[di]*si)%N
         cloud_list[i][1]=(cloud_list[i][1]+move_direction_Y[di]*si)%N
-    #2번
-    for i in range(len(cloud_list)):
-        grid[cloud_list[i][0]][cloud_list[i][1]]+=1
+        grid[cloud_list[i][0]][cloud_list[i][1]]+=1 #2번
         visit[cloud_list[i][0]][cloud_list[i][1]]=True
+        
     #4번
     for i in range(len(cloud_list)):
         four(cloud_list[i][0],cloud_list[i][1])
