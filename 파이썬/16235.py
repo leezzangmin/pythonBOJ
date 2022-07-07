@@ -101,3 +101,4 @@ for i in treecount.values():
     else:
         ans+=1
 print(ans)
+#실패
