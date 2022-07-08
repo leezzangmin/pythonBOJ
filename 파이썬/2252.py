@@ -27,7 +27,8 @@ for _ in range(compare_num):
     A,B=map(int,input().split())
     graph[A].append(B)
     jinipchasoo[B]+=1
-
+print(graph)
+print(jinipchasoo)
 miller_kakao()
 
 
