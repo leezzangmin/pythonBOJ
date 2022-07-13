@@ -1,6 +1,9 @@
-treecount=dict()
-treecount[(1,1)]=1
-if treecount.get((1,1)):
-    print(1)
-#treecount[(1,1)]+=1
-#print(treecount)
+import heapq
+h=[]
+heapq.heappop(h)
+c={}
+if 1 not in c:
+    c[1]=1
+else:
+    c[1]+=1
+print(c)
