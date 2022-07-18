@@ -1,9 +1,6 @@
-import heapq
-h=[]
-heapq.heappop(h)
-c={}
-if 1 not in c:
-    c[1]=1
-else:
-    c[1]+=1
-print(c)
+from itertools import product
+a=[1,2,3]
+c=product(a,repeat=11)
+for i in c:
+    dp[sum[i]]+=1
+    print(i)
