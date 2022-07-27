@@ -1,6 +1,5 @@
-from itertools import product
-a=[1,2,3]
-c=product(a,repeat=11)
-for i in c:
-    dp[sum[i]]+=1
-    print(i)
+num=1234
+print(10*num+(num//1000))
+print(1234//1000,'asdf')
+num2 = (10*num+(num//1000))%10000
+print(num2)
