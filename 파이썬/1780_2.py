@@ -32,4 +32,3 @@ while s>=1:
     s=int(s/3)
 for i in ans:
     print(i)
-#print(ans)
