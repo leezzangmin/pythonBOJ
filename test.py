@@ -1,2 +1,6 @@
-a=[1,0]+[0,1]
-print(a)
+import heapq
+h=[]
+heapq.heappush(h,(-1,123))
+heapq.heappush(h,(-1,124))
+
+print(heapq.heappop(h))
