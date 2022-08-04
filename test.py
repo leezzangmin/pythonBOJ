@@ -1,6 +1,3 @@
-import heapq
-h=[]
-heapq.heappush(h,(-1,123))
-heapq.heappush(h,(-1,124))
-
-print(heapq.heappop(h))
+a=[[1],[2,3]]
+avg=sum(map(sum,a))
+print(avg)
