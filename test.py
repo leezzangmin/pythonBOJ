@@ -1,3 +1,7 @@
-a={'ZG431SN': 0, 'ZG5080K': 1, 'ST123D': 2, 'ZG206A': 3}
-for i,b in a.items():
-    print(i,b)
+import sys
+a=sys.maxsize*100
+ans=0
+for i in range(40000):
+    for j in range(i+1,40000):
+        ans+=1
+print(ans)

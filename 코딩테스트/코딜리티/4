@@ -1,0 +1,14 @@
+-- write your code in PostgreSQL 9.4
+-- 어느 고객이 최소 sum(발신,수신) 10분이상 통화하고 새로운 계약을 했는지 궁금하다
+-- 두 테이블 phones, calls
+-- phones(name,phone_number)
+-- calls(id,caller,callee,duration)
+
+SELECT a.name as name 
+from phones as a 
+left join calls as b 
+on a.phone_number=b.callee or a.phone_number=b.caller
+group by a.name 
+having sum(b.duration)>=10
+order by a.name;
+

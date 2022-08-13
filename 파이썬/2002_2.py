@@ -12,7 +12,6 @@ ans=0
 for ks,vs in end.items():
     for ke,ve in start.items():
         if start[ke]<start[ks] and end[ks]<end[ke]:
-            print(ks,ke,'asdf')
             ans+=1
             break
 print(ans)
