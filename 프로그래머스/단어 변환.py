@@ -7,25 +7,22 @@ def diff(a,b):
         return True
     return False
 
-def dfs(cur, level, t,words):
-    print(cur,'asdf',level,t)
+def dfs(cur, level, t, words):
     global visit
-    if cur == t:
-        print('aszmfioszjf',level)
-        return level
     for i in range(len(words)):
-        if diff(cur,words[i]) and visit[i]==False:
-            visit[i]=True
+        if diff(cur,words[i]) and visit[i]>level+1:
+            visit[i]=level+1
             dfs(words[i], level+1, t, words)
+
             
 def solution(begin, target, words):
     global visit
     answer = 0
-    visit = [False] * len(words)
+    visit = [10**8] * len(words)
     if target not in words:
         return 0
-    answer = dfs(begin, 0, target, words)
-    print('answer',answer)
-    return answer
-
-solution("hit","cog",["hot", "dot", "dog", "lot", "log", "cog"])
+    
+    dfs(begin, 0, target, words)
+    asdf=words.index(target)
+    
+    return visit[asdf]
