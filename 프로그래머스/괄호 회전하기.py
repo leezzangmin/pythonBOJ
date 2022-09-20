@@ -1,20 +1,26 @@
 from collections import deque
 def define(modified,length):
     stack=['x']
-    for _ in range(length):
-        i=modified.popleft()
-        if i=='[':
-            if stack[-1]==']':
+   # print(modified,'modi')
+    for i in modified:
+        if i==']':
+            if stack[-1]=='[':
                 stack.pop()
-        elif i=='{':
-            if stack[-1]=='}':
+            else:
+                stack.append(i)
+        elif i=='}':
+            if stack[-1]=='{':
                 stack.pop()
-        elif i=='(':
-            if stack[-1]==')':
+            else:
+                stack.append(i)
+        elif i==')':
+            if stack[-1]=='(':
                 stack.pop()
+            else:
+                stack.append(i)
         else:
             stack.append(i)
-    print(stack)
+  #  print(stack)
     
     if len(stack)==1:
         return True
@@ -28,7 +34,7 @@ def solution(s):
     for _ in range(ls):
         if define(s,ls):
             answer+=1
-        s=s.rotate(1)
-    print(s)
+        s.rotate(1)
+    print(answer)
 
     return answer
