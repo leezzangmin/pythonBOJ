@@ -1,0 +1,46 @@
+from collections import defaultdict
+import time
+
+def solution(cacheSize, cities):
+    lc=len(cities)
+    answer = 0
+    i,j=0,0
+    if cacheSize==0:
+        return lc*5
+    memory=defaultdict(int)
+    while len(memory)!=cacheSize:
+        if cities[j].lower() in memory:
+            answer+=1
+        else:
+            answer+=5
+        memory[cities[j].lower()]+=1
+        j+=1
+
+    while j<lc:
+        if len(memory)<cacheSize:
+            memory[cities[j].lower()]+=1
+            if cities[j].lower() in memory:
+              answer+=1
+            else:
+                answer+=5
+            memory[cities[j].lower()]+=1
+            j+=1
+        elif len(memory)==cacheSize:
+            if cities[j].lower() in memory:
+              answer+=1
+            else:
+                answer+=5
+                while len(memory)==cacheSize:
+                    memory[cities[i].lower()]-=1
+                
+                    if memory[cities[i].lower()]==0:
+                        del memory[cities[i].lower()]
+                        i+=1
+            
+
+            memory[cities[j].lower()]+=1
+            j+=1
+
+    return answer
+
+print(solution(10,	["Jeju", "Pangyo", "Seoul", "NewYork", "LA"]))
