@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 from collections import defaultdict
 d=defaultdict()
 try:
@@ -19,3 +20,8 @@ except:
 
 print(d[3,3])
 print(d[1,1])
+=======
+a="asdf__asdf__"
+aa=a.split('_')
+print(aa)
+>>>>>>> Stashed changes
