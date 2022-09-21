@@ -1,12 +1,21 @@
-import heapq
+from collections import defaultdict
+d=defaultdict()
+try:
+    d[(3,3)].append([2,2])
+except:
+    d[(3,3)]=[[2,2]]
 
-answer = 0
-priorities=[3,2,1,1234]
-priorities=priorities*-1
-print(priorities,'dd')
-a=heapq.heapify(priorities)
+try:
+    d[(3,3)].append([100,2])
+except:
+    d[(3,3)]=[2,2]
 
-print(heapq.heappop(priorities),'asdf')
-print(heapq.heappop(priorities),'asdf')
-print(heapq.heappop(priorities),'asdf')
-print(heapq.heappop(priorities),'asdf')
+
+try:
+    d[(3,3)].append([9999,2])
+except:
+    d[(3,3)]=[2,2]
+
+
+print(d[3,3])
+print(d[1,1])
