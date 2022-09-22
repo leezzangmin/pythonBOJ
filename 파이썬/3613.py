@@ -47,7 +47,7 @@ elif b==False: #java
         else:
             answer+=s[i]
     print(answer)
-elif b==3:
+elif b==3: # 변환없는 단어
     print(s) 
-elif b==4:
+elif b==4: # 에러
     print('Error!')
