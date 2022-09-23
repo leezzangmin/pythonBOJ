@@ -1,3 +1,3 @@
-a=''
-b=a.lower()
-print(b)
+a='-'
+print(int(a))
+#print(a.isdecimal())
