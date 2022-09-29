@@ -1,3 +1,5 @@
-a=[1,2,3]
-print(a[::-1])
-print(reversed(a))
+a=10
+b=0
+
+for i in range(a,b-1,-1):
+    print(i)
