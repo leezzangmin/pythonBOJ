@@ -1,5 +1,6 @@
-a=10
-b=0
+from collections import defaultdict
 
-for i in range(a,b-1,-1):
+d=defaultdict()
+d['asdf']=1
+for i in d:
     print(i)
