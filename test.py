@@ -1,6 +1,10 @@
-from collections import defaultdict
-
-d=defaultdict()
-d['asdf']=1
-for i in d:
-    print(i)
+S = set()
+for _ in range(1):
+    txt = input()
+    tl = len(txt)
+    ret = ''
+    for i in range(tl):
+        ret += txt[i]
+        print(ret,'ret')
+        S.add(ret)
+print(S)

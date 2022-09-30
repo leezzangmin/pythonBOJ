@@ -8,9 +8,8 @@ def dfs(x,money):
     #print(money,'mmm')
     mm=int(money*0.1)
     answer[x]+=money-mm
-    if mm>10:
-        for mx in graph[x]:
-            dfs(mx,mm)
+    for mx in graph[x]:
+        dfs(mx,mm)
 
 
 
