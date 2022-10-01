@@ -14,20 +14,19 @@ def bfs(first,c):
         cost,x=heapq.heappop(h)
         if street[x]<cost:
             continue
-
+        if x==K:
+            return
 
         mx=x-1
         cc=cost+1
         if 0<=mx<maxlength and street[mx]>cc:
             street[mx]=cc
             heapq.heappush(h,(cc,mx))
-
         mx=x+1
         cc=cost+1
         if 0<=mx<maxlength and street[mx]>cc:
             street[mx]=cc
             heapq.heappush(h,(cc,mx))
-
         mx=x*2
         cc=cost
         if 0<=mx<maxlength and street[mx]>cc:

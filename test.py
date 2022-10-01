@@ -1,3 +1,2 @@
-a='-'
-print(int(a))
-#print(a.isdecimal())
+a='A'
+print(ord(a))
