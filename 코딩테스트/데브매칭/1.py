@@ -1,5 +1,5 @@
 import sys;
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10**6)
 from collections import deque
 
 def solution(registered_list, new_id):

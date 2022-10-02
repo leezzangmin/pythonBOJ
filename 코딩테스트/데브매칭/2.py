@@ -52,7 +52,6 @@ def solution(maps):
                     s=sum(templ)
                     templ=[0]*26
                     templ[pointer]=s
-               # print(templ,'ttt')
                 for mm in range(26):
                     global_area[mm]+=templ[mm]
 

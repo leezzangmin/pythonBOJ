@@ -1,6 +1,14 @@
-from itertools import permutations
-from itertools import combinations
-import itertools
+
+
+def combination(N, M, level, idx):
+    if level == M:
+        print(result)
+        return
+
+    for i in range(idx, N):
+        result[level] = list[i]
+        combination(N, M, level + 1, i + 1) # i+1 말고 i면 중복 허용
+
 def solution(k):
     answer=0    
 
@@ -14,9 +22,10 @@ def solution(k):
     #    return 7
    # elif k==11:
   #     return 99
-
+    
     for i in range(11,-1,-1):
-        
+        if k>fire[i]:
+            k-=1
 
 
     
