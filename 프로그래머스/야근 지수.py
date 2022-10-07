@@ -1,8 +1,6 @@
 import heapq
 def solution(time, works):
-    answer = 0
-    works=works
-    
+    answer = 0    
     for i in range(len(works)):
         works[i]=-works[i]
     heapq.heapify(works)
@@ -13,6 +11,7 @@ def solution(time, works):
         a+=1
         time-=1
         heapq.heappush(works,a)
+        
     for i in works:
         answer+=i**2
 
