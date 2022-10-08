@@ -7,7 +7,7 @@ l,r=0,sys.maxsize
 answer=0
 while l<=r:
     mid=(l+r)//2
-    print(mid,'mid')
+  #  print(mid,'mid')
     temp=0
     for c in cable:
         temp+=c//mid
