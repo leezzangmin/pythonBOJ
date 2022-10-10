@@ -48,8 +48,9 @@ def min(start):
 
 def minCostPath(g_nodes, g_from, g_to, g_weight, x, y):
     global graph
+    global distance
     # (다익스트라 1에서 x) + (다익스트라 x에서 y) + (다익스트라 y에서 g_nodes)
-    answer=sys.maxsize
+    answer=0
     
     ln=len(g_from)
     
@@ -57,21 +58,21 @@ def minCostPath(g_nodes, g_from, g_to, g_weight, x, y):
     
     for i in range(ln):
         graph[g_from[i]].append((g_to[i],g_weight[i]))
-        graph[g_to[i]].append(g_from[i],g_weight[i])
+        graph[g_to[i]].append((g_from[i],g_weight[i]))
 
     distance=[sys.maxsize]*(ln+1)
     distance[1]=0
     min(1)
-    print(distance[x],'x')
+   # print(distance[x],'x')
     answer+=distance[x]
     distance=[sys.maxsize]*(ln+1)
     distance[x]=0
     min(x)
-    print(distance[y],'y')
+   # print(distance[y],'y')
     answer+=distance[y]
     distance=[sys.maxsize]*(ln+1)
     distance[y]=0
     min(y)
-    print(distance[g_nodes],'gnode')
+   # print(distance[g_nodes],'gnode')
     answer+=distance[g_nodes]
     return answer
